@@ -1,5 +1,5 @@
 version: "3.9"
-services:
+services: #her servis ayrı bir conteiner
   db:
     image: postgres:15
     environment:
