@@ -1,7 +1,10 @@
 import os, datetime, jwt
 from passlib.context import CryptContext
 
-JWT_SECRET = os.getenv("JWT_SECRET", "change_me")
+JWT_SECRET = os.getenv("JWT_SECRET")
+if not JWT_SECRET:
+    raise RuntimeError("JWT_SECRET is not set. Configure it in environment (.env/CI secret).")
+
 JWT_ALG = os.getenv("JWT_ALG", "HS256")
 JWT_EXPIRE_MIN = int(os.getenv("JWT_EXPIRE_MIN", "240"))
 
