@@ -1,6 +1,15 @@
+# MacOS gereksiz dosyaları
 .DS_Store
-.env
+# Python cache klasörleri
 __pycache__/
 *.pyc
+*.pyo
+# Virtual environment
 .venv/
+# Ortam değişkenleri
+.env
+# Postgres veri klasörü (lokalde tutulsun, imaja kopyalanmasın)
 pgdata/
+# IDE ve editör klasörleri
+.vscode/
+.idea/
